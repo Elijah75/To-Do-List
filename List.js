@@ -1,16 +1,40 @@
 let Top=1
 const Click=new Audio
 Click.src='./Click.wav'
-
+const Hover_Btn=document.getElementById('Add_btn')
 const input=document.getElementById('Input_Text')
 const List1=document.getElementById('First_Task')
 const List2=document.getElementById('Second_Task')
 const List3=document.getElementById('Third_Task')
 const List4=document.getElementById('Forth_Task')
 const List5=document.getElementById('Fifth_Task')
-
+const Main_Bar=document.getElementById('Sample')
 const Completed= new Audio
  Completed.src='./Achievement.wav'
+        // Main_Bar.style.width='100px'
+        
+        Hover_Btn.addEventListener('mouseenter',()=>{
+        //                 // console.log("Hello WOrld")
+        // input.style.width='85%'
+                Hover_Btn.style.backgroundColor='rgb(129, 123, 172)'
+                Hover_Btn.style.transition='width 1s'
+                InputPartEnter()
+                Hover_Btn.style.width='70px'
+        })
+        Hover_Btn.addEventListener('mouseleave',()=>{
+                Hover_Btn.style.backgroundColor=''
+                input.style.width='90%'
+                Hover_Btn.style.width='50px'        
+        })
+
+        function InputPartEnter(){
+                input.style.width='85%'
+                input.style.transition='width 1s'
+        }
+
+
+     
+
 
         // Random Images Generator
 const Images=['https://wallpapercave.com/wp/wp2634897.jpg',
@@ -33,7 +57,7 @@ const Images=['https://wallpapercave.com/wp/wp2634897.jpg',
     
 const Random_Image=Math.floor(Math.random()*16);
 const Duplicate=document.getElementsByClassName('container')
-console.log(Random_Image)
+// console.log(Random_Image)
 document.body.style.background=`url(${Images[Random_Image] } )`
 // document.body.style.background=`url(${Images[1]})`
 document.body.style.backgroundRepeat='no-repeat'
@@ -41,7 +65,7 @@ document.body.style.backgroundSize='cover'
 
             function Add(){
           
-                console.log("Something get added Here")
+                
                 console.log(input.value);
                 if(Top>5) {
                         
@@ -149,6 +173,12 @@ document.body.style.backgroundSize='cover'
                                 
                         }
                 }
+
+            
+           
+                
+       
+        
 
                 
        
