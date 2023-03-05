@@ -61,7 +61,7 @@ const Duplicate=document.getElementsByClassName('container')
 document.body.style.background=`url(${Images[Random_Image] } )`
 // document.body.style.background=`url(${Images[1]})`
 document.body.style.backgroundRepeat='no-repeat'
-document.body.style.backgroundSize='cover'
+document.body.style.backgroundSize='auto'
 
             function Add(){
           
